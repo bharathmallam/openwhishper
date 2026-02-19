@@ -1,3 +1,17 @@
+// Ensure electronAPI is available (stub if preload didn't run)
+if (!window.electronAPI) {
+  window.electronAPI = {
+    onToggleDictation: () => () => {},
+    onStartDictation: () => () => {},
+    onStopDictation: () => () => {},
+    onNoAudioDetected: () => () => {},
+    onDeepgramPartialTranscript: () => () => {},
+    onDeepgramFinalTranscript: () => () => {},
+    onDeepgramError: () => () => {},
+    onDeepgramSessionEnd: () => () => {},
+  };
+}
+
 import React, { Suspense, useState, useEffect } from "react";
 import ReactDOM from "react-dom/client";
 import { I18nextProvider, useTranslation } from "react-i18next";

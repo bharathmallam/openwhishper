@@ -311,3 +311,20 @@ ehthumbs.db
 Thumbs.db 
 .macos-globe-listener.hash
 .linux-fast-paste.hash
+
+# PM2 logs and daemon
+/tmp/openwhispr-*
+.pm2/
+pm2.config.js
+
+# Downloaded models (users should download as needed)
+models/
+*.bin
+
+# Temporary files
+.cache/
+*.tmp
+*.temp
+
+# Local development overrides
+.env.local
